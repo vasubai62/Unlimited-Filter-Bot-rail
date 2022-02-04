@@ -241,7 +241,7 @@ async def start(client, message):
             pass
 
 
-@trojanz.on_message(filters.command('mcshelp') & filters.private)
+@trojanz.on_message(filters.command('mch') & filters.private)
 async def help(client, message):
     await message.reply_text(
         text=Script.HELP_MSG,
