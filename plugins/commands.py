@@ -283,4 +283,4 @@ async def about(client, message):
 
 @trojanz.on_message(filters.command('help') & filters.private)
 async def help(client, message):
-    await message.InputMediaAnimation(media("https://telegra.ph/file/33acc0274d5b751d25414.mp4"))
+    await InputMediaAnimation(media("https://telegra.ph/file/33acc0274d5b751d25414.mp4"))
