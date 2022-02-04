@@ -9,7 +9,7 @@ import random
 
 from pyrogram import filters
 from pyrogram import Client as trojanz
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InputMediaAnimation
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InputMediaAnimation, ChatJoinRequest
 
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
