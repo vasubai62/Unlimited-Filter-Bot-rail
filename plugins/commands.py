@@ -283,8 +283,8 @@ async def about(client, message):
     )
 
 GIF = [
-    "https://telegra.ph/file/33acc0274d5b751d25414.mp4"
-    "https://telegra.ph/file/d8a14793481d469488ebe.mp4"
+    "https://telegra.ph/file/33acc0274d5b751d25414.mp4",
+    "https://telegra.ph/file/d8a14793481d469488ebe.mp4",
     "https://telegra.ph/file/734656d1ee79c9ddda65b.mp4"
     ]
 
