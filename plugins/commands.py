@@ -222,7 +222,7 @@ async def start(client, message):
                 ],
                 [
                     InlineKeyboardButton("Movies Group", url="https://t.me/malayayalies"),
-                    InlinekeyboradButton("Movies Channel", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl")
+                    InlinekeyboardButton("Movies Channel", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl")
                 ]
             ]
         ),
