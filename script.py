@@ -2,7 +2,7 @@ class Script(object):
 
     START_MSG = """<b>Hy {},
 
-Join These Channels And Groups For Movies And Series
+Join These Channels And Groups For Movies And Series </b>
 """
 
 
