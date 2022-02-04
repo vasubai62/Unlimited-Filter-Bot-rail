@@ -242,7 +242,7 @@ async def start(client, message):
 
 
 @trojanz.on_message(filters.command('mch') & filters.private)
-async def help(client, message):
+async def mch(client, message):
     await message.reply_text(
         text=Script.HELP_MSG,
         disable_web_page_preview=True,
