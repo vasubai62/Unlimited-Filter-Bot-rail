@@ -222,7 +222,7 @@ async def start(client, message):
                 ],
                 [
                     InlineKeyboardButton("Movies Group", url="https://t.me/malayayalies"),
-                    InlinkeyboradButtob("Movies Channel", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl")
+                    InlinkeyboradButton("Movies Channel", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl")
                 ]
             ]
         ),
@@ -240,7 +240,7 @@ async def start(client, message):
             pass
 
 
-@trojanz.on_message(filters.command('help') & filters.private)
+@trojanz.on_message(filters.command('mcshelp') & filters.private)
 async def help(client, message):
     await message.reply_text(
         text=Script.HELP_MSG,
