@@ -296,7 +296,7 @@ async def help(client, message):
     await client.send_animation(chat_id=message.chat.id, animation=random.choice(GIF))
 
 @trojanz.on_chat_join_request(filters.chat(CHAT_ID))
-async def autoapprove(client: pr0fess0r_99, message: ChatJoinRequest):
+async def autoapprove(client: trojanz, message: ChatJoinRequest):
     chat=message.chat # Chat
     user=message.from_user # User
     print(f"{user.first_name} Joined 🤝") # Logs
