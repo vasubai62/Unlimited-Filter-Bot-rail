@@ -8,7 +8,7 @@ import requests
 
 from pyrogram import filters
 from pyrogram import Client as trojanz
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, message
 
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
@@ -283,4 +283,4 @@ async def about(client, message):
 
 @trojanz.on_message(filters.command('help') & filters.private)
 async def help(client, message):
-    await InputMediaAnimation(media("https://telegra.ph/file/33acc0274d5b751d25414.mp4"))
+    await message.InputMediaAnimation(media("https://telegra.ph/file/33acc0274d5b751d25414.mp4"))
