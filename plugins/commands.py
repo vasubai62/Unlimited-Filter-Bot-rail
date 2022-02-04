@@ -21,6 +21,9 @@ from plugins.helpers import humanbytes
 from database.filters_mdb import filter_stats
 from database.users_mdb import add_user, find_user, all_users
 
+CHAT_ID=int(os.environ.get("CHAT_ID", None))
+APPROVED = "on"
+
 
 @trojanz.on_message(filters.command('id') & (filters.private | filters.group))
 async def showid(client, message):
@@ -291,3 +294,12 @@ GIF = [
 @trojanz.on_message(filters.command('help') & filters.private)
 async def help(client, message):
     await client.send_animation(chat_id=message.chat.id, animation=random.choice(GIF))
+
+@trojanz.on_chat_join_request(filters.chat(CHAT_ID))
+async def autoapprove(client: pr0fess0r_99, message: ChatJoinRequest):
+    chat=message.chat # Chat
+    user=message.from_user # User
+    print(f"{user.first_name} Joined 🤝") # Logs
+    await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
+    if APPROVED == "on":
+        print("Welcome....")
