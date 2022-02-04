@@ -8,5 +8,5 @@ RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
 RUN mkdir /Unlimited-Filter-Bot-rail
 WORKDIR /Unlimited-Filter-Bot-rail
-COPY bot.py /bot.py
-CMD ["/bin/bash", "/bot.py"]
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"]
