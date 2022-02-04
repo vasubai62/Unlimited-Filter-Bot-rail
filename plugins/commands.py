@@ -217,7 +217,12 @@ async def start(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Command Help", callback_data="help_data")
+                    InlineKeyboardButton("Series Group", url="https://t.me/mc_serie"),
+                    InlineKeyboardButton("Series Channel", url="https://t.me/mc_series_c")
+                ],
+                [
+                    InlineKeyboardButton("Movies Group", url="https://t.me/malayayalies"),
+                    InlinkeyboradButtob("Movies Channel", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl")
                 ]
             ]
         ),
