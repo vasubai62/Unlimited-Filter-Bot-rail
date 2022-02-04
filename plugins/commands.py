@@ -8,7 +8,7 @@ import requests
 
 from pyrogram import filters
 from pyrogram import Client as trojanz
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, message
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, InputMediaAnimation
 
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
