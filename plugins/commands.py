@@ -270,10 +270,10 @@ async def about(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Unlimited-Filter-Bot")
+                        "〽️ Main Channel", url="https://t.me/joinchat/Fhcssgw5H8wwMDBl")
                 ],
                 [
-                    InlineKeyboardButton("BACK", callback_data="help_data"),
+                    InlineKeyboardButton("Movies", url="https://t.me/malayayalies"),
                     InlineKeyboardButton("CLOSE", callback_data="close_data"),
                 ]                
             ]
