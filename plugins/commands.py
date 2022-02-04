@@ -282,8 +282,12 @@ async def about(client, message):
         reply_to_message_id=message.message_id
     )
 
-photo=random.choice("https://telegra.ph/file/33acc0274d5b751d25414.mp4 https://telegra.ph/file/d8a14793481d469488ebe.mp4 https://telegra.ph/file/734656d1ee79c9ddda65b.mp4")
+GIF = [
+    "https://telegra.ph/file/33acc0274d5b751d25414.mp4"
+    "https://telegra.ph/file/d8a14793481d469488ebe.mp4"
+    "https://telegra.ph/file/734656d1ee79c9ddda65b.mp4"
+    ]
 
 @trojanz.on_message(filters.command('help') & filters.private)
 async def help(client, message):
-    await client.send_animation(chat_id=message.chat.id, animation=photo)
+    await client.send_animation(chat_id=message.chat.id, animation=random.choice(GIF))
