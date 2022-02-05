@@ -224,7 +224,6 @@ async def start(client, message):
     await client.send_photo(
         photo=random.choice(PHT),
         caption=Script.START_MSG.format(message.from_user.mention),
-        disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
