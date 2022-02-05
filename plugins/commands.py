@@ -212,10 +212,17 @@ async def bot_status(client,message):
         parse_mode="md"
     )
 
+PHT = [
+    "https://telegra.ph/file/dd8628d8b5614d4edb800.jpg",
+    "https://telegra.ph/file/3f4d57d5367bb899d81f0.jpg",
+    "https://telegra.ph/file/33db34a7043c6f4a7f05c.jpg",
+    "https://telegra.ph/file/43a27672e55e3969e4537.jpg"
+    ]
 
 @trojanz.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    await message.reply_text(
+    await client.send_photo(
+        photo=random.choice(PHT)
         text=Script.START_MSG.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup(
