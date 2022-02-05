@@ -221,7 +221,7 @@ PHT = [
 
 @trojanz.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    await client.send_photo(
+    await client.send_photo(chat_id=message.chat.id,
         photo=random.choice(PHT),
         caption=Script.START_MSG.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup(
