@@ -313,4 +313,4 @@ async def autoapprove(client: trojanz, message: ChatJoinRequest):
 @trojanz.on_message(filters.private & filters.regex(r'^-100'))
 async def invite_link(client, update, message):
     id_link = update.matches[0].group(0)
-    print(invite_link)
+    print(id_link)
