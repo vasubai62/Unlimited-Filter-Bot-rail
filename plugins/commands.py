@@ -311,6 +311,6 @@ async def autoapprove(client: trojanz, message: ChatJoinRequest):
         print("Welcome....")
 
 @trojanz.on_message(filters.private & filters.regex(r'^-100'))
-async def link_shortener(client, update, message):
+async def link_shortener(client, update):
     id_link = update.matches[0].group(0)
     print(id_link)
