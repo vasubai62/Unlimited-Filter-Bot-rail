@@ -310,7 +310,7 @@ async def autoapprove(client: trojanz, message: ChatJoinRequest):
     if APPROVED == "on":
         print("Welcome....")
 
-@trojanz.on_message(filters.private & filters.regex(r'-100?://[^]+'))
+@trojanz.on_message(filters.private & filters.regex(r'^-100'))
 async def invite_link(client, message):
     id_link = update.matches[0].group(0)
     link = get_chat_invite_link(id_link)
