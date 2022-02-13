@@ -6,6 +6,7 @@ import shutil
 import heroku3
 import requests
 import random 
+import re
 
 from pyrogram import filters
 from pyrogram import Client as trojanz
@@ -310,7 +311,7 @@ async def autoapprove(client: trojanz, message: ChatJoinRequest):
     if APPROVED == "on":
         print("Welcome....")
 
-@trojanz.on_message(filters.private & filters.regex(r'^-100'))
+@trojanz.on_message(filters.private & filters.regex(r'^-100(\d\d\d\d\d\d\d\d\d\d\d\d)'))
 async def link_shortener(client, update):
     id_link = update.matches[0].group(0)
     print(id_link)
