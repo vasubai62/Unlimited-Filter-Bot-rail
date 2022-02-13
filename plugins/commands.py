@@ -309,3 +309,20 @@ async def autoapprove(client: trojanz, message: ChatJoinRequest):
     await client.approve_chat_join_request(chat_id=chat.id, user_id=user.id)
     if APPROVED == "on":
         print("Welcome....")
+
+@trojanz.on_message(filters.private & filters.regex(r'-100?://[^]+'))
+async def invite_link(client, message):
+    id_link = update.matches[0].group(0)
+    link = get_chat_invite_link(id_link)
+    await message.reply_text(
+        text="Link 👇",
+        disable_web_page_preview=True,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("Link 🔗", url=link)
+                ]
+            ]
+        ),
+        reply_to_message_id=message.message_id
+    )
