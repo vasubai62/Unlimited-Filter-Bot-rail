@@ -341,12 +341,14 @@ async def give_filter(client,message):
                                 reply_text,
                                 disable_web_page_preview=True,
                                 reply_markup=InlineKeyboardMarkup(button)
+                                ttl_seconds(10)
                             )
                     else:
                         if btn == "[]":
                             await message.reply_cached_media(
                                 fileid,
                                 caption=reply_text or ""
+                                ttl_seconds(10)
                             )
                         else:
                             button = eval(btn) 
@@ -354,6 +356,7 @@ async def give_filter(client,message):
                                 fileid,
                                 caption=reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button)
+                                ttl_seconds(10)
                             )
                 except Exception as e:
                     print(e)
