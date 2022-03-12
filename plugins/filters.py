@@ -350,10 +350,12 @@ async def give_filter(client,message):
                             )
                         else:
                             button = eval(btn) 
-                            await message.reply_cached_media(
+                            k = await message.reply_cached_media(
                                 fileid,
                                 caption=reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button)
+                                await asyncio.sleep(8)
+                                await k.delete()
                             )
                 except Exception as e:
                     print(e)
