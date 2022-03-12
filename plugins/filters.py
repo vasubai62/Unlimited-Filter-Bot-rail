@@ -346,14 +346,16 @@ async def give_filter(client,message):
                         if btn == "[]":
                             await message.reply_cached_media(
                                 fileid,
-                                caption=reply_text or ""
+                                caption=reply_text or "",
+                                ttl_seconds(10)
                             )
                         else:
                             button = eval(btn) 
                             await message.reply_cached_media(
                                 fileid,
                                 caption=reply_text or "",
-                                reply_markup=InlineKeyboardMarkup(button)
+                                reply_markup=InlineKeyboardMarkup(button),
+                                ttl_seconds(10)
                             )
                 except Exception as e:
                     print(e)
