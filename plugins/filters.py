@@ -348,7 +348,7 @@ async def give_filter(client,message):
                             k = await message.reply_cached_media(
                                 fileid,
                                 caption=reply_text or "")
-                            await asyncio.sleep(8)
+                            await asyncio.sleep(200)
                             await k.delete()
                         else:
                             button = eval(btn) 
@@ -356,7 +356,7 @@ async def give_filter(client,message):
                                 fileid,
                                 caption=reply_text or "",
                                 reply_markup=InlineKeyboardMarkup(button))
-                            await asyncio.sleep(65)
+                            await asyncio.sleep(2000)
                             await k.delete()
                 except Exception as e:
                     print(e)
